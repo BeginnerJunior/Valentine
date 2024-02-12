@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Courier';
+            background-color:#ecc3db;
+            color: #d65dd6;
+        }
+        #valentineQuestion {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+        .answerButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            font-family: 'courier';
+            margin-bottom: 20px;
+            background-color:#FFE3E1;
+            color: #e67373;
+            border-radius: 12px;
+            border: 2px solid #FFE3E1;
+        }
+        .gif-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="valentineQuestion"><b>Do you want to go on a Valentine's date with me?</b></div>
+    <button class="answerButton" onclick="location.href='thankyou.html'">     Yes    </button>
+    <button class="answerButton" id="noButton">No</button>
+    <br>
+    <div class="gif-container">
+    <div class="tenor-gif-embed" data-postid="20777946" data-share-method="host" data-aspect-ratio="1.00" data-width="50%"><a href="https://tenor.com/view/shinchan-gif-20777946">Shinchan GIF</a>from <a href="https://tenor.com/search/shinchan-gifs">Shinchan GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    </div>
+
+    <script>
+        document.getElementById('noButton').addEventListener('click', function() {
+            var yesButton = document.querySelector('button[onclick*="thankyou.html"]');
+            var currentFontSize = parseInt(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentFontSize + 10) + 'px'; // Increase font size by 5px
+        });
+    </script>
+</body>
+</html>
